@@ -36,7 +36,7 @@ export default function HeroesList({ heroes }: IProps) {
             whileHover={{ scale: 1.3 }}
             whileTap={{ scale: 0.8 }}
             transition={{ duration: 0.8 }}
-          >            
+          >
             <HeroPicture hero={hero} />
           </motion.div>
         ))}
