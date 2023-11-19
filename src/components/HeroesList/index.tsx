@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+
 import HeroPicture from "../HeroPicture";
 
 import styles from "./heroesList.module.scss";
@@ -37,7 +39,9 @@ export default function HeroesList({ heroes }: IProps) {
             whileTap={{ scale: 0.8 }}
             transition={{ duration: 0.8 }}
           >
-            <HeroPicture hero={hero} />
+            <Link href={`/hero/${hero.id}`}>
+              <HeroPicture hero={hero} />
+            </Link>
           </motion.div>
         ))}
       </motion.section>

@@ -1,7 +1,8 @@
-import "./globals.scss"
+import "./globals.scss";
 import Image from "next/image";
+import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Spider-Verse",
   description:
     "Criando um carrossel parallax do Aranhaverso com React, Next.js e Framer Motion",
@@ -22,18 +23,15 @@ export default function RootLayout({
             width={36}
             height={25}
           />
-          <Image
-            src="/spider-logo.svg"
-            alt="Spiderman"
-            width={260}
-            height={70}
-          />
-          <Image
-            src="/icons/user.svg"
-            alt="Login"
-            width={36}
-            height={36}
-          />
+          <Link href="/">
+            <Image
+              src="/spider-logo.svg"
+              alt="Spiderman"
+              width={260}
+              height={70}
+            />
+          </Link>
+          <Image src="/icons/user.svg" alt="Login" width={36} height={36} />
         </header>
         {children}
       </body>
